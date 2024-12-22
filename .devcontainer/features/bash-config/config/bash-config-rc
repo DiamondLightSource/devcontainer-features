@@ -38,6 +38,12 @@ __bash_prompt() {
 __bash_prompt
 export PROMPT_DIRTRIM=4
 
+# colorize ls output
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors)"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+
 # enable bash completion for git
 if [[ -f /usr/share/bash-completion/completions/git ]]; then
   source /usr/share/bash-completion/completions/git
