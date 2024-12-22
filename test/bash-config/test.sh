@@ -12,6 +12,7 @@ source dev-container-features-test-lib
 # check <LABEL> <cmd> [args...]
 check "eternal history" bash -c "test $HISTFILE == $CONFIG_FOLDER/.bash_eternal_history"
 check "execute command" bash -c "test $HISTFILE == $CONFIG_FOLDER/.bash_eternal_history"
+check "man installed" man -V
 check "ls colors" bash -c "test $LS_OPTIONS == --color=auto"
 
 # Report results

@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # default opinioned bash configuration
+# DO NOT MODIFY if installed in /bash-config
+# this file will be overwritten on each container launch
 
 # enable enternal shared history
 export HISTCONTROL=ignoreboth:erasedups

@@ -8,7 +8,7 @@
     "documentationURL": "https://raw.githubusercontent.com/DiamondLightSource/devcontainer-features/refs/heads/main/.devcontainer/features/bash-config/README.md",
     "containerEnv": {
         "CONFIG_FOLDER": "/bash-config",
-        "CONFIG_STAGING": "/bash-config-staging"
+        "CONFIG_STAGING": "/tmp/bash-config"
     },
     "mounts": [
         {
@@ -17,5 +17,6 @@
             "type": "bind"
         }
     ],
-    "onCreateCommand": "bash /bash-config-staging/onCreateCommand.sh"
+    "onCreateCommand": "bash /tmp/bash-config/onCreateCommand.sh",
+    "postCreateCommand": "bash /tmp/bash-config/postCreateCommand.sh"
 }
