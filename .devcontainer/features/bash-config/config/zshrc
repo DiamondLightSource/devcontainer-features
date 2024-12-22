@@ -6,11 +6,10 @@
 # but you are then free to edit it
 
 # set up eternal history for zsh
-export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=-1
-export HISTFILESIZE=-1
-export SAVEHIST=-1
-export HISTFILE=$CONFIG_FOLDER/.zsh_eternal_history
+HISTCONTROL=ignoreboth:erasedups
+HISTSIZE=10000000
+SAVEHIST=$HISTSIZE
+HISTFILE=$CONFIG_FOLDER/.zsh_eternal_history
 
 # set a theme compatible with vscode terminals
 ZSH_THEME="dst"
