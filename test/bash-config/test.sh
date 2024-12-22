@@ -11,6 +11,7 @@ source dev-container-features-test-lib
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
 check "execute command" bash -c "test $HISTFILE == $CONFIG_FOLDER/.bash_eternal_history"
+check "ls colors" bash -c "test $LS_OPTIONS == --color=auto"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
