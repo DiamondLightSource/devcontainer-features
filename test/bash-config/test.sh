@@ -10,6 +10,7 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
+check "eternal history" bash -c "test $HISTFILE == $CONFIG_FOLDER/.bash_eternal_history"
 check "execute command" bash -c "test $HISTFILE == $CONFIG_FOLDER/.bash_eternal_history"
 check "ls colors" bash -c "test $LS_OPTIONS == --color=auto"
 
