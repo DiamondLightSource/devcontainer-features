@@ -48,6 +48,12 @@ if [ -z "$(git config --get core.editor)" ] && [ -z "${GIT_EDITOR}" ]; then
     fi
 fi
 
+# colorize ls output
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors)"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+
 # enable bash completion for git
 if [[ -f /usr/share/bash-completion/completions/git ]]; then
   source /usr/share/bash-completion/completions/git
